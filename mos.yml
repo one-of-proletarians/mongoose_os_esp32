@@ -1,0 +1,42 @@
+author: mongoose-os
+description: A Mongoose OS app skeleton
+version: 1.0
+
+libs_version: ${mos.version}
+modules_version: ${mos.version}
+mongoose_os_version: ${mos.version}
+
+# Optional. List of tags for online search.
+tags:
+  - c
+
+# List of files / directories with C sources. No slashes at the end of dir names.
+sources:
+  - src
+
+# List of dirs. Files from these dirs will be copied to the device filesystem
+filesystem:
+  - fs
+
+config_schema:
+  - ["mmm", "o", { title: "" }]
+  - ["mmm.chat_id", "i", 0, { title: "" }]
+  - ["mmm.message", "s", "hello world", { title: "" }]
+
+  - ["telegram.enable", true]
+  - ["telegram.token", "5184779686:AAGwnJ2LtdLeIfTyGjr_IWfik_dtbV1x5Ag"]
+  - ["telegram.echo_bot", false]
+  - ["telegram.acl", "[921469172]"]
+
+  - ["wifi.sta.enable", true]
+  - ["wifi.sta.ssid", "UPC94543C7"]
+  - ["wifi.sta.pass", "3M7bpfspfsJp"]
+
+libs:
+  - origin: https://github.com/mongoose-os-libs/core
+  - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: https://github.com/kotelnikov/mgos_telegram
+    name: telegram
+
+# Used by the mos tool to catch mos binaries incompatible with this file format
+manifest_version: 2017-09-29

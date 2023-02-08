@@ -1,0 +1,9 @@
+{
+  "mos.port": "/dev/ttyUSB0",
+  "cmake.sourceDirectory": "${workspaceFolder}/deps/lwip/lwip",
+  "files.associations": {
+    "mgos_config.h": "c",
+    "mgos_config_util.h": "c"
+  },
+  "mos.board": "ESP32"
+}
